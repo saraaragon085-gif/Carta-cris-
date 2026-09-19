@@ -4,49 +4,171 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tengo algo para ti 💜</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;font-family:Georgia,serif;background:linear-gradient(135deg,#faf7fb,#eee4f5);color:#403047;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.page{width:min(92vw,620px);min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.card{background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border-radius:28px;padding:42px 30px;box-shadow:0 20px 60px rgba(72,39,83,.16);border:1px solid rgba(255,255,255,.8);width:100%}
-.hidden{display:none}
-.heart{font-size:44px;animation:pulse 1.8s infinite}
-h1{font-size:38px;margin:14px 0 28px;font-weight:500}
-button{border:0;background:#76517e;color:white;padding:15px 28px;border-radius:999px;font-size:16px;cursor:pointer;box-shadow:0 8px 22px rgba(118,81,126,.25)}
-button:hover{transform:translateY(-1px)}
-.letter{text-align:left;line-height:1.75;font-size:18px;max-height:70vh;overflow:auto;padding-right:5px}
-.letter h2{text-align:center;font-size:28px;font-weight:500;margin-top:0}
-.final{text-align:center;margin-top:30px;font-size:21px}
-.small{font-size:13px;opacity:.65;margin-top:20px}
-@keyframes pulse{50%{transform:scale(1.08)}}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Georgia,serif;
+  background:linear-gradient(135deg,#eadcff,#f7efff);
+  color:#3d2948;
+}
+
+.page{
+  width:min(92vw,620px);
+  min-height:90vh;
+  margin:auto;
+  padding:25px 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.card{
+  background:rgba(255,255,255,.82);
+  border-radius:25px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow:0 10px 35px rgba(70,30,90,.15);
+}
+
+.hidden{
+  display:none;
+}
+
+.heart{
+  font-size:44px;
+  animation:pulse 1.8s infinite;
+}
+
+h1{
+  font-size:38px;
+  margin:14px 0 28px;
+  font-weight:500;
+}
+
+button{
+  border:0;
+  border-radius:14px;
+  background:#76517e;
+  color:white;
+  padding:14px 22px;
+  font-size:17px;
+  font-family:Georgia,serif;
+  cursor:pointer;
+}
+
+button:hover{
+  transform:translateY(-1px);
+}
+
+.letter{
+  text-align:left;
+  line-height:1.75;
+  font-size:18px;
+}
+
+.letter h2{
+  text-align:center;
+  font-size:28px;
+  font-weight:500;
+}
+
+.final{
+  text-align:center;
+  margin-top:30px;
+  font-size:21px;
+}
+
+.small{
+  font-size:13px;
+  opacity:.65;
+  margin-top:20px;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.08)}
+}
 </style>
 </head>
+
 <body>
+
 <div class="page">
+
   <section id="cover" class="card">
+
     <div class="heart">💜</div>
-    <h1>Tengo algo para ti…</h1>
-    <button onclick="openLetter()">Abrir carta 💌</button>
-    <div class="small">Toca el botón para abrirla</div>
+
+    <h1>Tengo algo para ti...</h1>
+
+    <button onclick="openLetter()">
+      Abrir carta 💌
+    </button>
+
+    <div class="small">
+      Toca el botón para abrirla
+    </div>
+
   </section>
+
 
   <section id="letter" class="card hidden">
+
     <div class="letter">
+
       <h2>Mi Cris,</h2>
-      <p>Quería agradecerte por haber aparecido en mi vida, eres todo lo que necesito, gracias por ser tan lindo y tan especial siempre, por hacerme sentir amada todos los días, por consentirme y tratar de ser mejor siempre para que yo esté feliz, eres lo mejor que me ha pasado, te amo y te admiro un montón, nunca había sido tan feliz, eres el hombre de mi vida y no me veo con absolutamente nadie más que no seas tu, quiero un hogar contigo y que seas el papá de mis hijos. Te amo como a nadie 💜.</p>
-      <div class="final"><strong>Te amo como a nadie. 💜</strong><br><br><em>Nos vemos el 14 de noviembre… 🥹</em></div>
+
+      <p>
+        Quería agradecerte por haber aparecido en mi vida.
+        Hay personas que llegan sin avisar y terminan
+        convirtiéndose en alguien demasiado importante,
+        y tú eres una de esas personas.
+      </p>
+
+      <p>
+        Gracias por cada momento, por cada sonrisa,
+        por las conversaciones y por todos esos pequeños
+        detalles que hacen que estar contigo sea especial.
+      </p>
+
+      <p>
+        Solo quería que supieras que te quiero muchísimo
+        y que ocupas un lugar muy especial en mi corazón. 💜
+      </p>
+
+      <div class="final">
+        <strong>Te amo como a nadie. 💜</strong>
+      </div>
+
+      <br><br>
+
+      <button onclick="window.open('https://youtu.be/8A9IF2FEpW8','_blank')">
+        Escuchar nuestra canción 🎵
+      </button>
+
     </div>
+
   </section>
+
 </div>
 
+
 <script>
+
 function openLetter(){
-  document.getElementById('cover').classList.add('hidden');
-  document.getElementById('letter').classList.remove('hidden');
-  // El enlace de YouTube se abre al tocar el botón, respetando las restricciones
-  // de reproducción automática de los navegadores.
-  window.open('https://youtu.be/8A9IF2FEpW8?si=ZzrkFcuRqPVf-Iq3','_blank');
+
+  document.getElementById('cover')
+    .classList.add('hidden');
+
+  document.getElementById('letter')
+    .classList.remove('hidden');
+
 }
+
 </script>
+
 </body>
 </html>
